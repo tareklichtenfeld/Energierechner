@@ -1,7 +1,8 @@
 import streamlit as st
 
 st.set_page_config(page_title="Der kleine Energierechner", layout="wide",
-                   page_icon=":material/energy_savings_leaf:")
+                   page_icon=":material/energy_savings_leaf:",
+                   initial_sidebar_state='collapsed')
 
 hide_st_style = """
             <style>
@@ -41,3 +42,18 @@ with st.expander("In E-Scooter-Fahrten nach Steinfurt"):
 with st.expander("Läufst du lieber?"):
     st.write(f"Statt so ein Sprachmodell zu fragen hättest du übers Jahr verteilt auch {round(zuckerverbrauch,2)} kg Zucker essen können, die enthalten nämlich so viel Energie wie für deine {ai_yearly} Anfragen benötigt wird, und pushen dich sicher ein paar mal beim Longrun zur Bib in Steinfurt, wo du dann selbst recherchieren kannst.")
     st.write("Aber wahrscheinlich hast du das sowieso gemacht :D")
+st.markdown(""
+            "")
+with st.popover("Was bedeutet das jetzt?"):
+    st.write("Der Betrieb der Rechenzentren für Large Language Models hat einen enormen Strombedarf. Solange der Strom dafür nicht nur aus erneuerbaren Energiequellen stammt, trägt die Nutzung von KI-Tools zur Verstärkung des Treibhauseffekts durch den damit verbundenen CO2-Ausstoß bei.")
+
+
+
+with st.sidebar.expander("Quellen"):
+    st.link_button("Energieverbrauch von LLMs","https://www.scinexx.de/news/technik/wie-viel-strom-braucht-der-ki-boom/")
+    st.link_button("Entwicklung im Energieverbrauch","https://www.tagesschau.de/wirtschaft/digitales/ki-energie-strom-verbrauch-klimaschutz-100.html")
+with st.sidebar.expander("Annahmen"):
+    st.write(":material/storage: Energieverbrauch von LLMs: 6 Wh/Anfrage")
+    st.write(":material/phone_iphone: Kapazität eines Handyakkus: 5000 mAh bei 3.7 V")
+    st.write(":material/nutrition: Energiegehalt von Zucker: 4.5 kWh/kg")
+    st.write(":material/local_cafe: Energiebedarf der Zubereitung von Kaffee: 0.03 kWh/Tasse")
