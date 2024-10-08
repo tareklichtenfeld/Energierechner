@@ -6,8 +6,8 @@ st.set_page_config(page_title="Der kleine Energierechner", layout="wide",
 
 hide_st_style = """
             <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
+            #MainMenu {visibility: visible;}
+            footer {visibility: visible;}
             header {visibility: visible;}
             </style>
             """
