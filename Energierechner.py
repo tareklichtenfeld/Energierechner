@@ -33,13 +33,13 @@ kaffeeverbrauch=ai_energy_consumption/0.03
 handyladungen=ai_energy_consumption/0.0185
 
 st.header(f"Um mal in Relation zu setzen, wie viel Energie deine {ai_weekly} Anfragen pro Woche benötigen, hier ein paar kurze Vergleiche:")
-with st.expander("In Kaffeetassen"):
+with st.expander(":material/local_cafe: In Kaffeetassen"):
     st.write(f"Das sind ganze {int(round(kaffeeverbrauch,0))} heiße Tassen Kaffee pro Woche, die du mit der Energie zubereiten könntest. ")
-with st.expander("In Handyladungen"):
+with st.expander(":material/phone_iphone: In Handyladungen"):
     st.write(f"Du hättest dein Handy mit der dafür benötigten Energie {int(round(handyladungen,0))} mal laden können - alleine in dieser Woche.")
-with st.expander("In E-Scooter-Fahrten nach Steinfurt"):
+with st.expander(":material/electric_scooter: In E-Scooter-Fahrten nach Steinfurt"):
     st.write(f"Wow, wenn du damit so weitermachst, hättest du für den gleichen Strombedarf stattdessen in diesem Jahr auch {int(round(e_scooter_drives,0))} mal mit dem E-Scooter von Münster in die Bereichsbibliothekt Steinfurt und zurück fahren können, um dir dort die Fragen aus Büchern zu beantworten.")
-with st.expander("Läufst du lieber?"):
+with st.expander(":material/directions_run: Läufst du lieber?"):
     st.write(f"Statt so ein Sprachmodell zu fragen hättest du übers Jahr verteilt auch {round(zuckerverbrauch,2)} kg Zucker essen können, die enthalten nämlich so viel Energie wie für deine {ai_yearly} Anfragen benötigt wird, und pushen dich sicher ein paar mal beim Longrun zur Bib in Steinfurt, wo du dann selbst recherchieren kannst.")
     st.write("Aber wahrscheinlich hast du das sowieso gemacht :D")
 st.markdown(""
@@ -57,3 +57,4 @@ with st.sidebar.expander("Annahmen"):
     st.write(":material/phone_iphone: Kapazität eines Handyakkus: 5000 mAh bei 3.7 V")
     st.write(":material/nutrition: Energiegehalt von Zucker: 4.5 kWh/kg")
     st.write(":material/local_cafe: Energiebedarf der Zubereitung von Kaffee: 0.03 kWh/Tasse")
+    st.write(":material/electric_scooter: Energieverbrauch eines E-Scooters: 1 kWh/100 km")
